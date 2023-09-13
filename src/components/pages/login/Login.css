@@ -1,0 +1,25 @@
+.dash{
+    display: flex;
+    align-items: center;
+}
+.buttons{
+    display: flex;
+    width: 100%;
+    height: 10%;
+    justify-content: center;
+}
+.btn{
+    width: 34%;
+    height: 100%;
+    border-radius: 3px;
+    margin: 0 1%;
+}
+.fb{
+    background-color: #3d5da4;
+    border: none;
+    color: white;
+}
+.google{
+    background-color: #f5f5f5;
+    border:1px solid #c2c2c2;
+}
