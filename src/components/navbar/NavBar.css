@@ -1,0 +1,27 @@
+.toolbar{
+    background-color: #a03037;    
+    height: 8vh;
+}
+.logo{
+    width: 3.1%;
+    background-color: #a03037;
+    margin-left: 10%;
+}
+.last-icons{
+    width: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+.profile-box, .cart-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profile-icon{
+    height: 75%;
+}
+.text{
+    font-size: 80%;
+}
