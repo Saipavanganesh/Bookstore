@@ -20,7 +20,7 @@ function Signup(){
           <form className="form">
             <div className="signup-form">
               <div className="heading">
-                <div><Link id='login' to="/login" underline="none">LOGIN</Link></div>
+                <div><Link id='login' to="/" underline="none">LOGIN</Link></div>
                 <div id='signup'>SIGNUP</div>
               </div>
               <div className="input-details"><TextField className="outlined-basic" label="Full Name" variant="outlined" /></div>

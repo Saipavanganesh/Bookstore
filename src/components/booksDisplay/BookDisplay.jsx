@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function BookDisplay() {
     let navigate = useNavigate();
@@ -15,8 +16,10 @@ function BookDisplay() {
     }
     return (
         <div className='bd-outer-box'>
+            <div className='bd-Link'>
+                <Link to={"/dashboard"}>Home/</Link>BookDisplay
+            </div>
             <div className="bd-main-content">
-
                 <div className="bd-left-box">
                     <div className="bd-sm1">
                         <img className="bd-image-one" src={imageOne} alt="Image One" />

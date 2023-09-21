@@ -1,9 +1,13 @@
 import React from 'react'
 import './ForgotPassword.css'
 import TextField from '@mui/material/TextField';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function ForgotPassword() {
+    let Navigate = useNavigate();
+    const handleFpClick = () => {
+        Navigate("/signup")
+    }
     return (
         <div className='fp-outer-box'>
             <div className='fp-text'>Forgot Your Password?</div>
@@ -21,8 +25,8 @@ function ForgotPassword() {
                         <button type="submit" className='fp-reset-button'>Reset Password</button>
                     </div>
                 </div>
-                <div className="fp-create-account">
-                    <div><Link className='fp-link' to="/signup">CREATE ACCOUNT</Link></div>
+                <div className="fp-create-account" onClick={handleFpClick}>
+                    <div>CREATE ACCOUNT</div>
                 </div>
             </div>
         </div>

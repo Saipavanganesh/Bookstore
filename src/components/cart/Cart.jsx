@@ -5,6 +5,7 @@ import image from "../images/book-1.jpg"
 import AddIcon from '@mui/icons-material/AddCircleOutlineOutlined';
 import RemoveIcon from '@mui/icons-material/RemoveCircleOutlineOutlined';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Cart() {
     let navigate = useNavigate();
@@ -14,6 +15,9 @@ function Cart() {
     return (
         <div className="cart-outer-box">
             <div className="cart-main-content">
+            <div className='cart-Link'>
+                <Link to={"/dashboard"}>Home/</Link>Cart
+            </div>
                 <div className="cart-main">
                     <div className="cart-my-cart">
                         <div className="cart-title">
@@ -38,7 +42,7 @@ function Cart() {
                                 Rs.1500
                                 <s className="cart-old-price">Rs.2000</s>
                             </div>
-                            
+
                         </div>
                     </div>
                     <div className="cart-place-order">

@@ -1,0 +1,12 @@
+.dash-outer-box{
+    padding: 3% 5%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+.cards-card{
+    margin-bottom: 10%;
+}
+.db-books{
+    font-size: 2.5vw;
+}

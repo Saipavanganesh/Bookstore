@@ -13,7 +13,7 @@ export default function Cards({title}) {
     }
   return (
     <div className="cards-outer-box" onClick={handleCardClick}>
-      <Card className='cards-card' sx={{ maxWidth: 270 }}>
+      <Card className='cards-card' sx={{ width: 250 }}>
 
         <div className="cards-card-top">
           <CardMedia
