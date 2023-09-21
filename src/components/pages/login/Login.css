@@ -29,3 +29,6 @@ a{
     display: flex;
     justify-content: flex-end;
 }
+#log-forgot{
+    color: blue;
+}

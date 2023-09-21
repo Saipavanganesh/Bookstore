@@ -2,24 +2,11 @@ import React, { Component } from 'react'
 import './Signup.css'
 import TextField from '@mui/material/TextField';
 import image from '../../images/bookStoreLoginLogo.png'
-import Link from '@mui/material/Link';
+import { Link } from 'react-router-dom';
 
 
-class Signup extends Component {
-  constructor(props) {
-    super(props)
-  
-    this.state = {
-       fullName:"",
-       email:"",
-       password:"",
-       mobileNumber:""
-    }
-    const handleClick = () => {
-      return "ganesh"
-    }
-  }
-  render() {
+function Signup(){
+
     return (
       <div className="outer-box">
         <div className="content">
@@ -33,7 +20,7 @@ class Signup extends Component {
           <form className="form">
             <div className="signup-form">
               <div className="heading">
-                <div><Link id='login' href="/login" underline="none">LOGIN</Link></div>
+                <div><Link id='login' to="/login" underline="none">LOGIN</Link></div>
                 <div id='signup'>SIGNUP</div>
               </div>
               <div className="input-details"><TextField className="outlined-basic" label="Full Name" variant="outlined" /></div>
@@ -44,14 +31,14 @@ class Signup extends Component {
               
               <div className="input-details"><TextField className="outlined-basic" label="Mobile Number" variant="outlined" /></div>
               
-              <button className="submit-button button" type="submit" onClick={this.handleClick}>Signup</button>
+              <button className="submit-button button" type="submit" >Signup</button>
             </div>
           </form>
         </div>
       </div>
     )
   }
-}
+
 
 
 export default Signup

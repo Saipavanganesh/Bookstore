@@ -11,6 +11,7 @@ import ProfileIcon from '@mui/icons-material/PermIdentityOutlined';
 import CartIcon from '@mui/icons-material/ShoppingCartOutlined';
 import './NavBar.css'
 import logo from '../images/openBook.png';
+import { useNavigate } from 'react-router-dom';
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -56,14 +57,22 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function NavBar() {
+    let navigate = useNavigate();
+    const handleCartClick = () => {
+        navigate("/cart")
+    }
+    const handleNavClick = () => {
+        navigate("/dashboard")
+    }
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar className='toolbar'>
-          <img className='logo' src={logo} alt="Bookstore logo" />
+          <img className='logo' onClick={handleNavClick} src={logo} alt="Bookstore logo" />
           <Typography className='bookstore-text'
             variant="h6"
             noWrap
+            onClick={handleNavClick}
             component="div"
             sx={{ display: { xs: 'none', sm: 'block' } }}
           >
@@ -88,7 +97,7 @@ export default function NavBar() {
               <span className='text'>Profile</span>
             </div>
             <div className="cart-box">
-              <IconButton size="larger" aria-label="show 4 new mails" color="inherit">
+              <IconButton onClick={handleCartClick} size="larger" aria-label="show 4 new mails" color="inherit">
                 <CartIcon className='cart-icon' />
               </IconButton>
               <span className='text'>Cart</span>

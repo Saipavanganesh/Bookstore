@@ -6,8 +6,13 @@ import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
+import { useNavigate } from 'react-router-dom';
 
 function BookDisplay() {
+    let navigate = useNavigate();
+    const handleBdClick = () => {
+        navigate("/cart")
+    }
     return (
         <div className='bd-outer-box'>
             <div className="bd-main-content">
@@ -27,7 +32,7 @@ function BookDisplay() {
                     </div>
                     <div className="bd-buttons">
                         <div className="bd-add-bag">
-                            <button className="bd-add-btn">ADD TO BAG</button>
+                            <button className="bd-add-btn" onClick={handleBdClick}>ADD TO BAG</button>
                         </div>
                         <div className="bd-wishlist">
                             <button className="bd-wish-btn"> <span className="bd-heart"> ♥ </span>WISHLIST</button>

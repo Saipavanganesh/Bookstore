@@ -1,0 +1,82 @@
+.op-outer-box {
+  width: 100vw;
+  height: 91vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.op-main-content {
+  width: 60%;
+  height: 90%;
+}
+.op-image {
+  width: 32%;
+}
+.op-box1 {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+}
+.op-box2 {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+}
+.op-text {
+  padding: 1%;
+  width: 30%;
+  text-align: center;
+}
+.op-box3 {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+}
+.op-table {
+  width: 90%;
+  height: 80%;
+  font-size: 0.9vw;
+  font-weight: 500;
+}
+.op-top{
+    width: 100%;
+    height: 40%;
+    border: 1px solid #c7c1c1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.op-bottom{
+    width: 100%;
+    height: 60%;
+    border: 1px solid #c7c1c1;
+    display: flex;
+    font-size: 0.8vw;
+}
+.op-email-us{
+    width: 33.3%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 0.5px solid #c7c1c1;
+}
+.op-box4{
+    height: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.op-submit-button{
+    height: 85%;
+    width: 25%;
+    color: white;
+    background-color: #3371b5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

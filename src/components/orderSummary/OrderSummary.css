@@ -1,0 +1,108 @@
+.os-outer-box {
+    width: 100vw;
+    height: 91vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .os-main-content {
+    width: 55%;
+    height: 70%;
+  }
+  .os-main {
+    width: 100%;
+    height: 68%;
+    border: 1px solid #e4d6d6;
+    border-radius: 2px;
+  }
+  .os-my-os {
+    width: 96%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3vw;
+    font-weight: 600;
+    padding: 2%;
+  }
+  .os-location{
+      display: flex;
+      align-items: center;
+      border: 1px solid #d3cece;
+      padding: 1%;
+  }
+  .os-mid-box {
+    width: 50%;
+    height: 58%;
+    display: flex;
+  }
+  .os-book-logo{
+      width: 40%;
+      height: 100%;
+  }
+  .os-total-books{
+      width: 60%;
+      height: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+  }
+  .os-book-author, .os-old-price{
+      font-size: 0.9vw;
+      color: #928f8f;
+      margin:0 3%;
+  }
+  .os-book-price{
+      font-size: 1.1vw;
+      font-weight: 500;
+  }
+  .os-image{
+      width: 60%;
+      padding: 2% 20%;
+  }
+  .os-book-title{
+      font-size: 1.1vw;
+      font-weight: 500;
+  }
+  .os-place-order {
+    width: 98%;
+    height: 18%;
+    padding: 1%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .os-order-button {
+    width: 20%;
+    height: 70%;
+    color: white;
+    background-color: #3371b5;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  .os-bottom-two {
+    margin-top: 1.5%;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1vw;
+    font-weight: 500;
+  }
+  .os-address-details {
+    width: 96%;
+    height: 20%;
+    border: 1px solid #e4d6d6;
+    border-radius: 2px;
+    padding: 2%;
+  }
+  .os-order-summary {
+    width: 96%;
+    height: 20%;
+    border: 1px solid #e4d6d6;
+    border-radius: 2px;
+    padding: 2%;
+  }
+  

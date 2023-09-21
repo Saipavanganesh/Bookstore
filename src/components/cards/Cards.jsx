@@ -4,10 +4,15 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import book1 from '../images/book-1.jpg'
 import './Cards.css'
+import { useNavigate } from 'react-router-dom';
 
 export default function Cards({title}) {
+    let navigate = useNavigate();
+    const handleCardClick = () => {
+        navigate("/bookDisplay")
+    }
   return (
-    <div className="cards-card">
+    <div className="cards-outer-box" onClick={handleCardClick}>
       <Card className='cards-card' sx={{ maxWidth: 270 }}>
 
         <div className="cards-card-top">

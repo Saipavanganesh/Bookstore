@@ -1,50 +1,54 @@
-import React, { Component } from 'react'
+import React from 'react'
 import TextField from '@mui/material/TextField';
 import image from '../../images/bookStoreLoginLogo.png'
-import Link from '@mui/material/Link';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import './Login.css'
 
-class Login extends Component {
-  render() {
+function Login()  {
+    let navigate = useNavigate();
+    const handleClick = () => {
+        navigate("/dashboard");
+    }
     return (
         <div className="outer-box">
-        <div className="content">
+            <div className="content">
 
-          <div className="image">
-            <img className='signup-logo' src={image} alt="SignupLogo" />
-          </div>
+                <div className="image">
+                    <img className='signup-logo' src={image} alt="SignupLogo" />
+                </div>
 
-          <form className="form">
+                <form className="form">
 
-            <div className="signup-form">
+                    <div className="signup-form">
 
-              <div className="heading">
-                <div id='signup'>LOGIN</div>
-                <div><Link id='login' href="/signup" underline="none">SIGNUP</Link></div>
-              </div>
+                        <div className="heading">
+                            <div id='signup'>LOGIN</div>
+                            <div><Link id='login' to="/signup" underline="none">SIGNUP</Link></div>
+                        </div>
 
-              <div className="input-details"><TextField className="outlined-basic" label="Email Id" variant="outlined" /></div>
-              
-              <div className="input-details"><TextField className="outlined-basic" label="Password" variant="outlined" /></div>
+                        <div className="input-details"><TextField className="outlined-basic" label="Email Id" variant="outlined" /></div>
 
-              <a href="/forgotPassword">Forgot Password?</a>
+                        <div className="input-details"><TextField className="outlined-basic" label="Password" variant="outlined" /></div>
 
-              <button className="submit-button button" type="submit">Login</button>
+                        <Link id='log-forgot' to="/forgotPassword">Forgot Password?</Link>
 
-              <div className="input-details dash">--------------------OR-------------------</div>
-              
-              <div className="buttons">
-                <button className='btn button fb'>Facebook</button>
-                <button className='btn button google'>Google</button>
-              </div>
-              
+                        <button className="submit-button button" onClick={handleClick} type="submit">Login</button>
+
+                        <div className="input-details dash">--------------------OR-------------------</div>
+
+                        <div className="buttons">
+                            <button className='btn button fb'>Facebook</button>
+                            <button className='btn button google'>Google</button>
+                        </div>
+
+                    </div>
+                </form>
             </div>
-          </form>
         </div>
-      </div>
     )
-  }
+
 }
 
 export default Login

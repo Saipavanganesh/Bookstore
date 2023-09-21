@@ -1,6 +1,7 @@
 import React from 'react'
 import './ForgotPassword.css'
 import TextField from '@mui/material/TextField';
+import { Link } from 'react-router-dom';
 
 function ForgotPassword() {
     return (
@@ -21,7 +22,7 @@ function ForgotPassword() {
                     </div>
                 </div>
                 <div className="fp-create-account">
-                    <div>CREATE ACCOUNT</div>
+                    <div><Link className='fp-link' to="/signup">CREATE ACCOUNT</Link></div>
                 </div>
             </div>
         </div>

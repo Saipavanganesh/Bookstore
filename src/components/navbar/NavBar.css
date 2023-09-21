@@ -6,6 +6,10 @@
     width: 3.1%;
     background-color: #a03037;
     margin-left: 10%;
+    cursor: pointer;
+}
+.bookstore-text{
+    cursor: pointer;
 }
 .last-icons{
     width: 10%;
