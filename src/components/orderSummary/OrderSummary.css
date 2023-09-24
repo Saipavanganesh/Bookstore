@@ -1,13 +1,13 @@
 .os-outer-box {
     width: 100vw;
-    height: 91vh;
+    /* height: 91vh; */
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
   }
   .os-main-content {
     width: 55%;
-    height: 70%;
+    /* height: 70%; */
   }
   .os-main {
     width: 100%;

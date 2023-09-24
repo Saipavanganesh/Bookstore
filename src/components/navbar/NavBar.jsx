@@ -12,6 +12,9 @@ import CartIcon from '@mui/icons-material/ShoppingCartOutlined';
 import './NavBar.css'
 import logo from '../images/openBook.png';
 import { useNavigate } from 'react-router-dom';
+import MenuItem from "@mui/material/MenuItem";
+import Menu from "@mui/material/Menu";
+
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -57,13 +60,26 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function NavBar() {
-    let navigate = useNavigate();
+    let Navigate = useNavigate();
     const handleCartClick = () => {
-        navigate("/cart")
+        Navigate("/cart")
     }
     const handleNavClick = () => {
-        navigate("/dashboard")
+        Navigate("/dashboard")
     }
+    const [anchorEl, setAnchorEl] = React.useState(null); //Profile
+  const handleMenu = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+  const handleLogout = () => {
+    if(localStorage.key){
+        localStorage.removeItem("token");
+    }
+    Navigate("/");
+  }
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -91,10 +107,27 @@ export default function NavBar() {
           <Box sx={{ flexGrow: 1 }} />
           <div className='last-icons'>
             <div className="profile-box">
-              <IconButton className='profile-icon' size="larger" aria-label="show 4 new mails" color="inherit">
+              <IconButton className='profile-icon' size="larger" onClick={handleMenu} aria-label="show 4 new mails" color="inherit">
                 <ProfileIcon />
               </IconButton>
               <span className='text'>Profile</span>
+              <Menu
+              id="menu-appbar"
+              anchorEl={anchorEl}
+              anchorOrigin={{
+                vertical: "top",
+                horizontal: "right",
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "right",
+              }}
+              open={Boolean(anchorEl)}
+              onClose={handleClose}
+            >
+              <MenuItem onClick={handleLogout}>Log Out</MenuItem>
+            </Menu>
             </div>
             <div className="cart-box">
               <IconButton onClick={handleCartClick} size="larger" aria-label="show 4 new mails" color="inherit">

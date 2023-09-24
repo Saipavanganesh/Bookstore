@@ -56,7 +56,7 @@
     height: 10%;
     margin: 1.5vh;
 }
-.submit-button{
+#submit-button{
     width:70%;
     height: 10%;
     background-color: #a03037;
@@ -65,7 +65,9 @@
     color:white;
     margin-top: 1.5vh;
     font-size: 110%;
+    cursor: pointer;
 }
+
 .outlined-basic{
     width: 70%;
 }

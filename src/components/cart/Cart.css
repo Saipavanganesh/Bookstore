@@ -6,12 +6,12 @@
   flex-direction: column;
   align-items: center;
 }
-.cart-Link{
-    display: flex;
-    width: 10%;
-    height: 10%;
-    justify-content: flex-start;
-    align-items: flex-start;
+.cart-Link {
+  display: flex;
+  width: 10%;
+  height: 10%;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 .cart-main-content {
   width: 55%;

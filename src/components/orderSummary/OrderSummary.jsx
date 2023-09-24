@@ -1,12 +1,13 @@
 import React from 'react'
 import image from "../images/book-1.jpg"
 import "./OrderSummary.css"
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
+
 
 function OrderSummary() {
-    let navigate = useNavigate();
+    let Navigate = useNavigate()
     const handleOsClick = () => {
-        navigate("/orderPlaced")
+        Navigate("/orderPlaced")
     }
   return (
     <div className="os-outer-box">

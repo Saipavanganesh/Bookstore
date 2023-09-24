@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './BookDisplay.css'
 import imageOne from "../images/book-1.jpg"
 import imageTwo from "../images/book-2.png"
@@ -6,19 +6,18 @@ import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
-import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 function BookDisplay() {
-    let navigate = useNavigate();
+    let Navigate = useNavigate()
     const handleBdClick = () => {
-        navigate("/cart")
+        Navigate("/cart")
     }
     return (
         <div className='bd-outer-box'>
-            <div className='bd-Link'>
-                <Link to={"/dashboard"}>Home/</Link>BookDisplay
-            </div>
+                <div className='bd-Link'>
+                    <Link to={"/dashboard"}>Home/</Link>BookDisplay
+                </div>
             <div className="bd-main-content">
                 <div className="bd-left-box">
                     <div className="bd-sm1">
@@ -65,7 +64,7 @@ function BookDisplay() {
                                 Book Detail
                             </li>
                             <li className="bd-desc">
-                            Since Don’t Make Me Think was first published in 2000, hundreds of thousands of Web designers and developers have relied on usability guru Steve Krug’s guide to help them understand the principles of intuitive navigation and information design. Witty, commonsensical, and eminently practical, it’s one of the best-loved and most recommended books on the subject.
+                                Since Don’t Make Me Think was first published in 2000, hundreds of thousands of Web designers and developers have relied on usability guru Steve Krug’s guide to help them understand the principles of intuitive navigation and information design. Witty, commonsensical, and eminently practical, it’s one of the best-loved and most recommended books on the subject.
                             </li>
                         </ul>
                     </div>
@@ -77,7 +76,7 @@ function BookDisplay() {
                             <Rating name="no-value" value={null} />
                         </div>
                         <div className="bd-write-review">
-                            <div className="bd-review"><input className='bd-input-review-field' type="text" placeholder='Write your review'/></div>
+                            <div className="bd-review"><input className='bd-input-review-field' type="text" placeholder='Write your review' /></div>
                         </div>
                         <div className="bd-review-submit-button">
                             <button className="bd-rating-submit" type="submit">Submit</button>
@@ -113,7 +112,7 @@ function BookDisplay() {
                                     <Rating name="read-only" value='4' readOnly />
                                 </div>
                                 <div>
-                                Very relevant even for the contemporary web design and ux, the examples given show a clear understanding of inherent user behavior.
+                                    Very relevant even for the contemporary web design and ux, the examples given show a clear understanding of inherent user behavior.
                                 </div>
                             </div>
                         </div>

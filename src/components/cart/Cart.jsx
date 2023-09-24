@@ -1,17 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Cart.css'
 import LocationIcon from '@mui/icons-material/LocationOnOutlined';
 import image from "../images/book-1.jpg"
-import AddIcon from '@mui/icons-material/AddCircleOutlineOutlined';
-import RemoveIcon from '@mui/icons-material/RemoveCircleOutlineOutlined';
-import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import CustomerDetails from '../customerDetails/CustomerDetails';
+import OrderSummary from '../orderSummary/OrderSummary';
 
 function Cart() {
-    let navigate = useNavigate();
+    const [custDetails, setCustDetails] = useState(false);
+    const [ordSummary, setOrdSummary] = useState(false);
+    
     const handleCartClick = () => {
-        navigate("/orderSummary")
+        setCustDetails(!custDetails)
     }
+    function OrderSum(summary){
+        setOrdSummary(summary)
+    }
+
     return (
         <div className="cart-outer-box">
             <div className="cart-main-content">
@@ -50,8 +55,12 @@ function Cart() {
                     </div>
                 </div>
                 <div className="cart-bottom-two">
-                    <div className="cart-address-details">Address Details</div>
-                    <div className="cart-order-summary">Order Summary</div>
+                    {
+                        custDetails ? <CustomerDetails OrderSum={OrderSum}/> :<div className="cart-address-details">Address Details</div>
+                    }
+                    {
+                        ordSummary ? <OrderSummary  /> : <div className="cart-order-summary">Order Summary</div>
+                    }
                 </div>
             </div>
         </div>
