@@ -6,7 +6,7 @@ import book1 from '../images/book-1.jpg'
 import './Cards.css'
 import { useNavigate } from 'react-router-dom';
 
-export default function Cards({title}) {
+export default function Cards({eachBook}) {
     let navigate = useNavigate();
     const handleCardClick = () => {
         navigate("/bookDisplay")
@@ -25,18 +25,18 @@ export default function Cards({title}) {
         <div className="cards-card-bottom">
           <CardContent>
             <div className='cards-title cards-box'>
-              <b>{title}</b>
+              <b>{eachBook.bookName}</b>
             </div>
             <div className="cards-author cards-box">
-              by Steve Krug
+                by {eachBook.author}
             </div>
             <span className="cards-rating cards-box">
               4.5 &#9733;
             </span>
             <span className='cards-total-reviews'>(20)</span>
             <div className='cards-cost cards-box'>
-              <b>Rs.1500 </b>
-              <s className='old-cost'>Rs.2000</s>
+              <b>Rs.{eachBook.discountPrice} </b>
+              <s className='old-cost'>Rs.{eachBook.price}</s>
             </div>
           </CardContent>
         </div>

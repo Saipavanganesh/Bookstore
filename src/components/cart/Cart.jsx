@@ -9,9 +9,11 @@ import OrderSummary from '../orderSummary/OrderSummary';
 function Cart() {
     const [custDetails, setCustDetails] = useState(false);
     const [ordSummary, setOrdSummary] = useState(false);
-    
+    const [btn, setBtn] = useState(true)
+
     const handleCartClick = () => {
-        setCustDetails(!custDetails)
+        setCustDetails(true)
+        setBtn(false)
     }
     function OrderSum(summary){
         setOrdSummary(summary)
@@ -51,7 +53,10 @@ function Cart() {
                         </div>
                     </div>
                     <div className="cart-place-order">
-                        <button className="cart-order-button" onClick={handleCartClick}>PLACE ORDER</button>
+                        {
+                            btn ? <button className="cart-order-button" onClick={handleCartClick}>PLACE ORDER</button> : ""
+                        }
+                        
                     </div>
                 </div>
                 <div className="cart-bottom-two">
