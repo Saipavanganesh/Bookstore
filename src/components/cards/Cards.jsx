@@ -4,12 +4,12 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import book1 from '../images/book-1.jpg'
 import './Cards.css'
-import { useNavigate } from 'react-router-dom';
 
-export default function Cards({eachBook}) {
-    let navigate = useNavigate();
+export default function Cards({eachBook, showBook}) {
+    // let navigate = useNavigate();
     const handleCardClick = () => {
-        navigate("/bookDisplay")
+        // navigate("/bookDisplay");
+        showBook(eachBook);
     }
   return (
     <div className="cards-outer-box" onClick={handleCardClick}>

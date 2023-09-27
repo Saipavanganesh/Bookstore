@@ -6,17 +6,20 @@ import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import TotalBooks from '../totalBooks/TotalBooks';
 
-function BookDisplay() {
-    let Navigate = useNavigate()
+
+function BookDisplay({bookDisp, hPage}) {
+    const [booksCount, setBooksCount] = useState(true)
     const handleBdClick = () => {
-        Navigate("/cart")
+        setBooksCount(false)
     }
+    
     return (
         <div className='bd-outer-box'>
                 <div className='bd-Link'>
-                    <Link to={"/dashboard"}>Home/</Link>BookDisplay
+                    <Link onClick={hPage}>Home/</Link>BookDisplay
                 </div>
             <div className="bd-main-content">
                 <div className="bd-left-box">
@@ -34,7 +37,10 @@ function BookDisplay() {
                     </div>
                     <div className="bd-buttons">
                         <div className="bd-add-bag">
-                            <button className="bd-add-btn" onClick={handleBdClick}>ADD TO BAG</button>
+                            {
+                                booksCount ? <button className="bd-add-btn" onClick={handleBdClick}>ADD TO BAG</button> : <TotalBooks/>
+                            }
+                            
                         </div>
                         <div className="bd-wishlist">
                             <button className="bd-wish-btn"> <span className="bd-heart"> ♥ </span>WISHLIST</button>
@@ -45,16 +51,17 @@ function BookDisplay() {
                 <div className="bd-right-box">
                     <div className="bd-book-details">
                         <div className="bd-book-title bd-box">
-                            Don't Make Me Think
+                            {/* Don't Make Me Think */}
+                            {bookDisp.bookName}
                         </div>
                         <div className="bd-book-author bd-box">
-                            by Steve Krug
+                            by {bookDisp.author}
                         </div>
                         <span className="bd-book-rating bd-box">4.5 &#9733;</span>
                         <span className="bd-total-reviews bd-box">(20)</span>
                         <div className="bd-book-price bd-box">
-                            Rs.1500
-                            <s className="bd-old-price bd-box">Rs.2000</s>
+                            Rs.{bookDisp.discountPrice}
+                            <s className="bd-old-price bd-box">Rs.{bookDisp.price}</s>
                         </div>
                     </div>
                     <hr />
@@ -64,7 +71,7 @@ function BookDisplay() {
                                 Book Detail
                             </li>
                             <li className="bd-desc">
-                                Since Don’t Make Me Think was first published in 2000, hundreds of thousands of Web designers and developers have relied on usability guru Steve Krug’s guide to help them understand the principles of intuitive navigation and information design. Witty, commonsensical, and eminently practical, it’s one of the best-loved and most recommended books on the subject.
+                                {bookDisp.description}
                             </li>
                         </ul>
                     </div>

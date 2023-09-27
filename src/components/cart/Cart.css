@@ -1,6 +1,6 @@
 .cart-outer-box {
   width: 100vw;
-  height: 91vh;
+  height: 91vh  ;
   display: flex;
   justify-content: center;
   flex-direction: column;
